@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro', sans-serif;
+  background-color: #001f3d; /* Dark blue */
+  color: rgb(218, 218, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 69vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  position: relative;
+  margin-top: 20px; /* Moves the game container higher */
+}
+
+.click-area {
+  position: relative;
+  display: inline-block;
+}
+
+#kebab-image {
+  width: 444px;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.2s ease; /* Add transition for filter */
+  filter: drop-shadow(0 0 15px rgb(157, 216, 216)); /* Default glow */
+}
+
+#kebab-image:active {
+  transform: scale(0.95); /* Click animation */
+  filter: drop-shadow(0 0 35px rgb(255, 255, 255)); /* Stronger white glow when clicked */
+}
+
+
+
+#kebab-image {
+  filter: drop-shadow(0 0 15px rgb(157, 216, 216));
+  transition: filter 0.2s ease;
+}
+
+#kebab-image:hover {
+  filter: drop-shadow(0 0 25px rgb(157, 216, 216)); /* Glow on hover */
+}
+
+
+
+#kebab-image:active {
+  transform: scale(0.95); /* Click animation */
+}
+
+#click-count {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 40px; /* Keeps distance from the kebab image */
+  text-shadow: 0 0 10px rgb(157, 216, 216),
+               0 0 20px rgb(157, 216, 216),
+               0 0 30px rgb(157, 216, 216);
+}
+
+
+
+
+
+#click-count {
+  font-size: 32px; /* increase from 24px */
+  font-weight: bold; /* make it bold */
+  margin-top: 20px;
+}
+
+.popup {
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  color: aqua;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+  transition: opacity 0.8s ease;
+}
+
+.popup-kebab {
+  width: 20px;
+  height: auto;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px white);
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+@keyframes popup-animation {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-50%, -10px);
+  }
+  50% {
+    transform: translate(-50%, -25px);
+  }
+  75% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+}
+
+.buy-button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.buy-button:hover {
+  background-color: aquamarine;
+}
+
+#kebabs-per-click {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgb(157, 216, 216),
+               0 0 20px rgb(157, 216, 216),
+               0 0 30px rgb(157, 216, 216);
+}
+
